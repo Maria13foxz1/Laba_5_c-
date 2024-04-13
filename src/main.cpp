@@ -24,6 +24,7 @@ sum_idx part_min(int, int, int);
 int main(){
     matrix_init();
     int threads_amount = 3;
+    omp_set_nested(1);
     double t1 = omp_get_wtime();
     
 #pragma omp parallel sections
